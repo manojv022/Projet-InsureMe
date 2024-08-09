@@ -202,4 +202,5 @@ Build Pipeline:
 ![image](https://github.com/user-attachments/assets/c4addedb-957b-4015-9d0e-814e1a1de895)
 
 
-![OUTPUT](https://github.com/kajol2699/Project-InsureMe/assets/130952932/237d1bd2-97df-4451-a69c-11e6c3ef6d12)
+![image](https://github.com/user-attachments/assets/82f037dd-46c1-4f03-a9c5-34a628559a78)
+
