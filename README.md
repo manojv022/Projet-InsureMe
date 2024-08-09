@@ -122,10 +122,9 @@ In Jenkins Job ->Configuration->choose GitHub hook trigger for GITScm polling
 
 ![WEBHOOK-JEN](https://github.com/kajol2699/Project-InsureMe/assets/130952932/81253cac-b3b6-4816-ac18-b044e671ee3d)
 
-To Create Webhook: go to settings of your github repository 
-In Payload URL: Add yours jenkins url
 
-![WEBHOOK](https://github.com/kajol2699/Project-InsureMe/assets/130952932/8d11e27b-39bc-4443-b01c-613290897690)
+
+
 
 ## $\color{bluew} \textbf{step 3: Install  Docker}$
 ````
@@ -143,57 +142,13 @@ Choose "Secret text" as the kind of credentials.  </br>
 Enter your DockerHub credentials (Username and Password) and give the credentials an ID (e.g., "docker"). </br>
 Click "OK" to save your DockerHub credentials. </br>
 
-```groovy
-pipeline {
-    
-     agent any
-
-    stages {
-        stage('Code-Checkout') {
-            steps {
-              checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-token', url: 'https://github.com/abhipraydhoble/Project-InsureMe.git']])
-            }
-        }
-        
-        stage('Code-Build') {
-            steps {
-               sh 'mvn clean package'
-            }
-        }
-        
-        stage('Containerize the application'){
-            steps { 
-               echo 'Creating Docker image'
-               sh "docker build -t abhipraydh96/insure:v1 ."
-            }
-        }
-        
-        stage('Docker Push') {
-    	agent any
-          steps {
-       	withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-            	sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-                sh 'docker push abhipraydh96/insure:v1'
-        }
-      }
-    }
-    
-      
-    stage('Code-Deploy') {
-        steps {
-           ansiblePlaybook credentialsId: 'ansible', installation: 'ansible', playbook: 'ansible-playbook.yml', vaultTmpPath: ''       
-        }
-      }
-    
-   }
-}
 
 
-```
+
 
 Build Pipeline:
 
-![BUILD PIPELINE](https://github.com/kajol2699/Project-InsureMe/assets/130952932/c3638768-a2e3-47c8-a691-35e92980d01d)
+
 
 
 
