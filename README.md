@@ -120,7 +120,8 @@ $\color{pink}{publicIp:8080}$
 As soon as the developer pushes the updated code on the GIT master branch, the Jenkins job should be triggered using a GitHub Webhook and Jenkins job should be triggered
 In Jenkins Job ->Configuration->choose GitHub hook trigger for GITScm polling
 
-![WEBHOOK-JEN](https://github.com/kajol2699/Project-InsureMe/assets/130952932/81253cac-b3b6-4816-ac18-b044e671ee3d)
+![image](https://github.com/user-attachments/assets/895955dc-bb2a-4acc-9ef1-83eb02b2a638)
+
 
 
 
