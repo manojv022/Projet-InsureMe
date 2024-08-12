@@ -124,8 +124,9 @@ In Jenkins Job ->Configuration->choose GitHub hook trigger for GITScm polling
 ![image](https://github.com/user-attachments/assets/895955dc-bb2a-4acc-9ef1-83eb02b2a638)
 
 
+To Create Webhook: go to settings of your github repository In Payload URL: Add yours jenkins url
 
-
+![WhatsApp Image 2024-08-12 at 14 52 53_8a58914b](https://github.com/user-attachments/assets/f1debf3b-03c3-4ccc-8a47-0534be0a4b68)
 
 
 ## $\color{bluew} \textbf{step 3: Install  Docker}$
