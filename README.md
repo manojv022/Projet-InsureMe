@@ -95,7 +95,8 @@ sudo systemctl enable jenkins
 Access Jenkins in a web browser using the public IP of your EC2 instance.
 $\color{pink}{publicIp:8080}$
 
-![JENKINS-HOME](https://github.com/kajol2699/Project-InsureMe/assets/130952932/eee7b43a-bdc6-44d4-b8ee-d66e101cea21)
+![image](https://github.com/user-attachments/assets/138aeb99-2fe4-42a7-85aa-fa46f3662c34)
+
 
 ### Install Necessary Plugins in Jenkins:
 
